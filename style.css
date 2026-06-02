@@ -1,0 +1,317 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    color: #111;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+/* =========================
+   NAV
+========================= */
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 50px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: "Cormorant Garamond";
+    letter-spacing: 3px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+}
+
+/* BUTTON */
+.nav-btn {
+    border: 1px solid #111;
+    padding: 10px 18px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #111;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    background: url("images/g1.jpg") center/cover no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond";
+    font-size: 64px;
+    animation: fadeUp 1.2s ease;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: #fff;
+    color: #111;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.light {
+    background: #fafafa;
+}
+
+.dark {
+    background: #f2f2f2;
+}
+
+h2 {
+    font-family: "Cormorant Garamond";
+    font-size: 44px;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   IMAGE BLOCKS
+========================= */
+
+.image {
+    height: 55vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.img1 {
+    background-image: url("images/g2.jpg");
+}
+
+.img2 {
+    background-image: url("images/s1.jpg");
+}
+
+.img3 {
+    background-image: url("images/s2.jpg");
+}
+
+/* =========================
+   STUDIOS
+========================= */
+
+.studio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.studio {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.studio img {
+    width: 520px;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.studio img:hover {
+    transform: scale(1.03);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 24px;
+    border: 1px solid #111;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #111;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: #111;
+    color: #fff;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews {
+    min-height: 80px;
+}
+
+.review {
+    display: none;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.review.active {
+    display: block;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    border: 1px solid #111;
+    padding: 25px;
+    text-decoration: none;
+    color: #111;
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    background: #111;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* =========================
+   FLOAT
+========================= */
+
+.float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .studio {
+        flex-direction: column;
+    }
+
+    .studio img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        padding: 15px 20px;
+    }
+}

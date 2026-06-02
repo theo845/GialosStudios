@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gialos Studios | Amorgos Luxury Stay</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="nav">
+        <div class="logo">GIALOS STUDIOS</div>
+
+        <div class="menu">
+            <a href="#experience">Experience</a>
+            <a href="#studios">Studios</a>
+            <a href="#reviews">Reviews</a>
+            <a class="nav-btn" href="#contact">Book Now</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="overlay"></div>
+
+        <div class="hero-content fade-in">
+            <h1>Wake Up Above The Aegean</h1>
+            <p>Seafront luxury studios in Katapola, Amorgos</p>
+
+            <a class="hero-btn" href="#contact">Book Your Stay</a>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section fade-in">
+        <h2>The Experience</h2>
+        <p>Minimal Cycladic architecture, absolute sea view, and pure Aegean calm.</p>
+    </section>
+
+    <!-- IMAGE -->
+    <section class="image img1"></section>
+
+    <!-- STUDIOS -->
+    <section id="studios" class="section light fade-in">
+
+        <h2>Our Studios</h2>
+
+        <div class="studio-container">
+
+            <div class="studio active">
+                <img src="images/g2.jpg">
+                <div>
+                    <h3>Studio I</h3>
+                    <p>Sea view • King bed • WiFi • Luxury stay</p>
+                </div>
+            </div>
+
+            <div class="studio">
+                <img src="images/s2.jpg">
+                <div>
+                    <h3>Studio II</h3>
+                    <p>Sea view • Privacy • Modern design</p>
+                </div>
+            </div>
+
+        </div>
+
+        <a class="explore-btn" href="#contact">Book Now</a>
+
+    </section>
+
+    <!-- IMAGE -->
+    <section class="image img2"></section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section fade-in">
+
+        <h2>Guest Reviews</h2>
+
+        <div class="reviews">
+            <div class="review active">“Absolutely breathtaking view.”</div>
+            <div class="review">“Pure relaxation and silence.”</div>
+            <div class="review">“Best stay in Amorgos.”</div>
+        </div>
+
+    </section>
+
+    <!-- IMAGE -->
+    <section class="image img3"></section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section dark fade-in">
+
+        <h2>Book Direct</h2>
+        <p>Best price guaranteed when booking directly</p>
+
+        <div class="contact-grid">
+
+            <a class="contact-card" href="tel:+306989450550">
+                Call
+                <span>+30 6989450550</span>
+            </a>
+
+            <a class="contact-card" href="https://wa.me/306989450550">
+                WhatsApp
+                <span>Instant chat</span>
+            </a>
+
+            <a class="contact-card" href="mailto:gialosstudios@gmail.com">
+                Email
+                <span>gialosstudios@gmail.com</span>
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>GIALOS STUDIOS • AMORGOS</p>
+    </footer>
+
+    <!-- FLOAT -->
+    <a class="float" href="https://wa.me/306989450550">WhatsApp</a>
+
+    <script>
+        // REVIEW ROTATION
+        let reviews = document.querySelectorAll('.review');
+        let i = 0;
+
+        setInterval(() => {
+            reviews[i].classList.remove('active');
+            i = (i + 1) % reviews.length;
+            reviews[i].classList.add('active');
+        }, 4000);
+
+        // SCROLL ANIMATION
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>
