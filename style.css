@@ -129,7 +129,7 @@ body {
 
 h2 {
     font-family: "Cormorant Garamond";
-    font-size: 44px;
+    font-size: 55px;
     margin-bottom: 30px;
 }
 
@@ -259,6 +259,7 @@ h2 {
     padding: 12px 18px;
     border-radius: 50px;
     text-decoration: none;
+    z-index: 999;
 }
 
 /* =========================
@@ -314,4 +315,73 @@ h2 {
     .nav {
         padding: 15px 20px;
     }
+    /* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+@media (max-width: 768px) {
+
+    /* NAV */
+    .nav {
+        padding: 12px 18px;
+    }
+
+    .menu {
+        gap: 12px;
+        font-size: 12px;
+    }
+
+    .nav-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    /* HERO */
+    .hero h1 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .hero-content {
+        padding: 0 15px;
+    }
+
+    /* SECTIONS */
+    .section {
+        padding: 80px 18px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    /* STUDIO LAYOUT */
+    .studio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .studio img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* CONTACT GRID */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 18px;
+    }
+
+    /* IMAGE BLOCKS */
+    .image {
+        height: 40vh;
+        background-attachment: scroll; /* important for mobile */
+    }
+}   
+html {
+    scroll-behavior: smooth;
+}
 }
