@@ -3,15 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Gialos Studios | Amorgos Luxury Stay</title>
 
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -24,90 +25,116 @@
             <a href="#experience">Experience</a>
             <a href="#studios">Studios</a>
             <a href="#reviews">Reviews</a>
-            <a class="nav-btn" href="#contact">Book Now</a>
+            <a class="btn" href="#contact">Book Now</a>
         </div>
     </header>
 
     <!-- HERO -->
     <section class="hero">
+
         <div class="overlay"></div>
 
-        <div class="hero-content fade-in">
+        <div class="hero-content reveal">
+
             <h1>Wake Up Above The Aegean</h1>
+
             <p>Seafront luxury studios in Katapola, Amorgos</p>
 
-            <a class="hero-btn" href="#contact">Book Your Stay</a>
+            <a class="btn primary" href="#contact">Book Your Stay</a>
+
         </div>
+
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="section fade-in">
+    <section id="experience" class="section reveal">
+
         <h2>The Experience</h2>
-        <p>Minimal Cycladic architecture, absolute sea view, and pure Aegean calm.</p>
+
+        <p>
+            Minimal Cycladic architecture, absolute sea view,
+            and pure Aegean calm.
+        </p>
+
     </section>
 
-    <!-- IMAGE -->
+    <!-- IMAGE 1 -->
     <section class="image img1"></section>
 
     <!-- STUDIOS -->
-    <section id="studios" class="section light fade-in">
+    <section id="studios" class="section light reveal">
 
         <h2>Our Studios</h2>
 
         <div class="studio-container">
 
-            <div class="studio active">
-                <img src="images/g2.jpg">
+            <div class="studio">
+
+                <div class="studio-media">
+                    <img src="images/g2.jpg" alt="Studio I - sea view">
+                    <a class="studio-book btn primary" href="#contact">Book Now</a>
+                </div>
+
                 <div>
                     <h3>Studio I</h3>
                     <p>Sea view • King bed • WiFi • Luxury stay</p>
                 </div>
+
             </div>
 
             <div class="studio">
-                <img src="images/s2.jpg">
+
+                <div class="studio-media">
+                    <img src="images/s2.jpg" alt="Studio II - interior">
+                    <a class="studio-book btn primary" href="#contact">Book Now</a>
+                </div>
+
                 <div>
                     <h3>Studio II</h3>
                     <p>Sea view • Privacy • Modern design</p>
                 </div>
+
             </div>
 
         </div>
 
-        <a class="explore-btn" href="#contact">Book Now</a>
-
     </section>
 
-    <!-- IMAGE -->
+    <!-- IMAGE 2 -->
     <section class="image img2"></section>
 
     <!-- REVIEWS -->
-    <section id="reviews" class="section fade-in">
+    <section id="reviews" class="section reveal">
 
         <h2>Guest Reviews</h2>
 
+        <h3 id="counter">0</h3>
+
+        <p class="sub">Five Star Reviews</p>
+
         <div class="reviews">
+
             <div class="review active">“Absolutely breathtaking view.”</div>
             <div class="review">“Pure relaxation and silence.”</div>
             <div class="review">“Best stay in Amorgos.”</div>
+
         </div>
 
     </section>
 
-    <!-- IMAGE -->
+    <!-- IMAGE 3 -->
     <section class="image img3"></section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section dark fade-in">
+    <section id="contact" class="section dark reveal">
 
         <h2>Book Direct</h2>
-
 
         <div class="contact-grid">
 
             <a class="contact-card" href="tel:+306989450550">
                 Call
-                <span>+30 6989450550</span>
+                <span>6989450550</span>
             </a>
 
             <a class="contact-card" href="https://wa.me/306989450550">
@@ -116,7 +143,7 @@
             </a>
 
             <a class="contact-card" href="mailto:gialosstudios@gmail.com">
-                Email:
+                Email
                 <span>gialosstudios@gmail.com</span>
             </a>
 
@@ -125,34 +152,12 @@
     </section>
 
     <footer>
-        <p>© 2022 Gialos Studios. All rights reserved.</p>
+        <p>© Gialos Studios • Amorgos</p>
     </footer>
 
-    <!-- FLOAT -->
     <a class="float" href="https://wa.me/306989450550">WhatsApp</a>
 
-    <script>
-        // REVIEW ROTATION
-        let reviews = document.querySelectorAll('.review');
-        let i = 0;
-
-        setInterval(() => {
-            reviews[i].classList.remove('active');
-            i = (i + 1) % reviews.length;
-            reviews[i].classList.add('active');
-        }, 4000);
-
-        // SCROLL ANIMATION
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        });
-
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
