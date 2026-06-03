@@ -389,3 +389,42 @@ p.sub {
         height: 78vh
     }
 }
+
+/* Smartphone optimization */
+@media(max-width:640px) {
+    .nav {
+        top: 12px;
+        padding: 8px 16px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 14px;
+        letter-spacing: 1px;
+        flex: 1 0 100%;
+        margin-bottom: 4px;
+    }
+
+    .menu {
+        gap: 6px;
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .menu a {
+        font-size: 12px;
+        padding: 4px 6px;
+        flex: 1;
+        text-align: center;
+    }
+
+    .menu .btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .hero {
+        margin-top: 80px;
+    }
+}
